@@ -24,10 +24,10 @@ class NocollectPage(Page):
 	def flag_list(self):
 		self.find_element(*self.flag_list_loc).click()
 
-
 	def nocollect_page(self):
 		''' 取消收藏 '''
 		CollectPage(self.driver).collect_page()
+		self.driver.close()
 		self.flag_list()
 		self.driver.switch_to_alert().accept()
 		sleep(3)

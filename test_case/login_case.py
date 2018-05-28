@@ -22,10 +22,12 @@ class Login(myunit.MyTest):
 		''' 用户登陆 '''
 		
 		LoginPage(self.driver).login_page()
-		# 断言
-		self.assertEqual(self.driver.find_element_by_xpath("/html/body/div[3]/div[3]/div[2]/div/dl/dt/a").text, u"nana_han", msg="fail")
-		print("ok ok ok")
 
+		#截取当前窗口，并指定截图图片的保存位置
+		self.driver.get_screenshot_as_file("D:\\download\\download5\\img\\login_img.jpg")
+		# 断言
+		self.assertEqual(self.driver.find_element_by_class_name("user_name").text, u"nana_han", msg="fail")
+		print("ok ok ok")
 
 	def tearDown(self):
 		self.driver.quit()

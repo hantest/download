@@ -24,6 +24,9 @@ class Follow(myunit.MyTest):
 		''' 关注 '''
 		FollowPage(self.driver).follow_page()
 
+		#截取当前窗口，并指定截图图片的保存位置
+		self.driver.get_screenshot_as_file("D:\\download\\download5\\img\\follow_img.jpg")
+
 
 	def tearDown(self):
 		self.driver.quit()
