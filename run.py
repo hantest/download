@@ -4,13 +4,13 @@ from selenium import webdriver
 from HTMLTestRunner import HTMLTestRunner
 import unittest, time, os
 from test_case.login_case import Login
+from test_case.logout_case import Logout
 from test_case.collect_case import Collect
 from test_case.nocollect_case import Nocollect
 from test_case.downloadvip_case import DownloadVip
 from test_case.follow_case import Follow
 from test_case.comment_case import Comment
                                                                                            
-
 
 
 # 多线程
@@ -22,14 +22,12 @@ if __name__ == '__main__':
 	
 	#构建测试集
 	suite = unittest.TestSuite()
-	#suite.addTest(login.Login("test_login"))  #登录
-	
+
 	#suite.addTest(unittest.makeSuite(Login,"test_login"))  #登陆
-	#suite.addTest(unittest.makeSuite(Login,"test_logout")) #退出
-	#suite.addTest(unittest.makeSuite(Login,"test_login"))  # 登陆、退出功能
+	#suite.addTest(unittest.makeSuite(Logout,"test_logout")) #退出
 	#suite.addTest(unittest.makeSuite(Collect,"test_collect")) #收藏
-	suite.addTest(unittest.makeSuite(Nocollect,"test_nocollect")) #取消收藏
-	#suite.addTest(unittest.makeSuite(DownloadVip,"test_download_vip")) #VIP用户下载
+	#suite.addTest(unittest.makeSuite(Nocollect,"test_nocollect")) #取消收藏
+	suite.addTest(unittest.makeSuite(DownloadVip,"test_download_vip")) #VIP用户下载
 	#suite.addTest(unittest.makeSuite(Follow,"test_follow"))  #关注
 	#suite.addTest(unittest.makeSuite(Comment,"test_comment"))  #评论
 

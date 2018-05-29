@@ -11,7 +11,7 @@ from .base import Page
 from .login_page import LoginPage
 
 #
-# 用例：收藏资源、取消收藏
+# 页面：收藏资源
 # time:2018-5-28
 # @HAN
 #
@@ -56,5 +56,6 @@ class CollectPage(Page):
 					self.driver.switch_to_window(handle)  #切换到制定的页面
 					self.favorite()
 					self.dl_lock()
+					self.driver.get_screenshot_as_file("D:\\download\\download5\\img\\collect_img.jpg")
 					self.my_favorite()
 					sleep(3)

@@ -12,7 +12,7 @@ from .login_page import LoginPage
 
 
 #
-# 用例：关注
+# 页面：关注
 # time:2018-4-27
 # @HAN
 #
@@ -50,4 +50,6 @@ class FollowPage(Page):
 			if handle != now_handle:
 				self.driver.switch_to_window(handle)
 				self.attention_btn()
+				#截取当前窗口，并指定截图图片的保存位置
+				self.driver.get_screenshot_as_file("D:\\download\\download5\\img\\follow_img.jpg")
 				sleep(3)

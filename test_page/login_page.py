@@ -10,7 +10,7 @@ import unittest, sys
 from .base import Page
 
 #
-# 用例：登录
+# 页面：登录
 # time:2018-4-25
 # @HAN
 #
@@ -49,4 +49,7 @@ class LoginPage(Page):
 		self.username()
 		self.password()
 		self.login_button()
+		#截取当前窗口，并指定截图图片的保存位置
+		self.driver.get_screenshot_as_file("D:\\download\\download5\\img\\login_img.jpg")
+		
 		sleep(3)

@@ -23,9 +23,6 @@ class Nocollect(myunit.MyTest):
 		''' 取消收藏 '''
 		NocollectPage(self.driver).nocollect_page()
 
-		#截取当前窗口，并指定截图图片的保存位置
-		self.driver.get_screenshot_as_file("D:\\download\\download5\\img\\nocollect_img.jpg")
-
 	def dearDown(self):
 		self.driver.quit()
 

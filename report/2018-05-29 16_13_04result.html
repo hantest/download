@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>下载测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2018-05-28 19:30:19</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:58.170327</p>
-<p class='attribute'><strong>Status:</strong> Pass 1 Failure 1</p>
+<p class='attribute'><strong>Start Time:</strong> 2018-05-29 16:13:04</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:48.743788</p>
+<p class='attribute'><strong>Status:</strong> Pass 1</p>
 
 <p class='description'>用例执行情况：</p>
 </div>
@@ -221,72 +221,25 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='failClass'>
-    <td>test_case.login_case.Login</td>
+<tr class='passClass'>
+    <td>test_case.downloadvip_case.DownloadVip</td>
+    <td>1</td>
     <td>1</td>
     <td>0</td>
-    <td>1</td>
     <td>0</td>
     <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
 </tr>
 
-<tr id='ft1.1' class='none'>
-    <td class='failCase'><div class='testcase'>test_login: 用户登陆</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
-        fail</a>
-
-    <div id='div_ft1.1' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft1.1: Traceback (most recent call last):
-  File "D:\download\download5\test_case\login_case.py", line 29, in test_login
-    self.assertEqual(self.driver.find_element_by_class_name("user_name").text, u"nana_han", msg="fail")
-AssertionError: 'my_profession' != 'nana_han'
-- my_profession
-+ nana_han
- : fail
-Traceback (most recent call last):
-  File "D:\download\download5\test_case\login_case.py", line 29, in test_login
-    self.assertEqual(self.driver.find_element_by_class_name("user_name").text, u"nana_han", msg="fail")
-AssertionError: 'my_profession' != 'nana_han'
-- my_profession
-+ nana_han
- : fail
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr class='passClass'>
-    <td>test_case.follow_case.Follow</td>
-    <td>1</td>
-    <td>1</td>
-    <td>0</td>
-    <td>0</td>
-    <td><a href="javascript:showClassDetail('c2',1)">Detail</a></td>
-</tr>
-
-<tr id='pt2.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_follow: 关注</div></td>
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_download_vip: VIP用户下载</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
 <tr id='total_row'>
     <td>Total</td>
-    <td>2</td>
     <td>1</td>
     <td>1</td>
+    <td>0</td>
     <td>0</td>
     <td>&nbsp;</td>
 </tr>
