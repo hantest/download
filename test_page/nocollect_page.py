@@ -6,40 +6,24 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.action_chains import ActionChains
 from time import sleep
-import unittest, sys
+import unittest, io, sys
 from .base import Page
 from .login_page import LoginPage
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='utf-8')
 
 #
 # 用例：取消收藏
-# time：2018-5-28
+# time：2018-5-29
 # @HAN
 #
 
 class NocollectPage(Page):
 
-	zx_list_loc = (By.XPATH, "/html/body/div[4]/div[2]/div[2]/div/div[1]/ul/li[2]")  #最新上传tab
-	detail_list_loc = (By.XPATH, "/html/body/div[4]/div[2]/div[2]/div/div[2]/div[2]/div/dl[1]")
-	favorite_loc = (By.ID, "favorite")  #收藏按钮
-	dl_lock_loc = (By.ID, "dl_lock") #收藏弹出框
-	my_favorite_loc = (By.XPATH, "//*[@id='dl_lock']/h4/a") #弹框中我的收藏
+	my_favs_loc = (By.LINK_TEXT, u"我的收藏")  # 二级导航我的收藏
 	flag_list_loc = (By.XPATH, "/html/body/div[4]/div/div[2]/div[1]/div/div/ul/li[1]/div/div[2]/div[4]/a")  #取消收藏按钮
 
-
-	def zx_list(self):
-		self.find_element(*self.zx_list_loc).click()
-
-	def detail_list(self):
-		self.find_element(*self.detail_list_loc).click()
-		
-	def favorite(self):
-		self.find_element(*self.favorite_loc).click()
-
-	def dl_lock(self):
-		self.find_element(*self.dl_lock_loc)
-
-	def my_favorite(self):
-		self.find_element(*self.my_favorite_loc).click()
+	def my_favs(self):
+		self.find_element(*self.my_favs_loc).click()
 
 	def flag_list(self):
 		self.find_element(*self.flag_list_loc).click()
@@ -48,20 +32,9 @@ class NocollectPage(Page):
 	def nocollect_page(self):
 		''' 取消收藏 '''
 		LoginPage(self.driver).login_page()
-		self.zx_list()
-		self.driver.close()
-		self.detail_list()
-		self.favorite()
-		self.dl_lock()
-		self.my_favorite()
-		#多窗口切换
-		now_handle = self.driver.current_window_handle  #获取当前窗口
-		all_handle = self.driver.window_handles  #获取全部窗口句柄集合
-
-		for handle in all_handle:
-			if handle != now_handle:
-				self.driver.switch_to_window(handle)  #切换到制定的页面
-				self.flag_list()
-				self.driver.switch_to_alert().accept()
-				sleep(3)
+		self.my_favs()
+		self.driver.get_screenshot_as_file("D:\\download\\download5\\img\\myfavs_img.jpg")
+		self.flag_list()
+		self.driver.switch_to_alert().accept()
+		sleep(3)
 
