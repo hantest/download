@@ -10,7 +10,7 @@ from test_case.nocollect_case import Nocollect
 from test_case.downloadvip_case import DownloadVip
 from test_case.follow_case import Follow
 from test_case.comment_case import Comment
-                                                                                           
+from test_case.album_case import Album
 
 
 # 多线程
@@ -27,9 +27,10 @@ if __name__ == '__main__':
 	#suite.addTest(unittest.makeSuite(Logout,"test_logout")) #退出
 	#suite.addTest(unittest.makeSuite(Collect,"test_collect")) #收藏
 	#suite.addTest(unittest.makeSuite(Nocollect,"test_nocollect")) #取消收藏
-	suite.addTest(unittest.makeSuite(DownloadVip,"test_download_vip")) #VIP用户下载
+	#suite.addTest(unittest.makeSuite(DownloadVip,"test_download_vip")) #VIP用户下载
 	#suite.addTest(unittest.makeSuite(Follow,"test_follow"))  #关注
-	#suite.addTest(unittest.makeSuite(Comment,"test_comment"))  #评论
+	#suite.addTest(unittest.makeSuite(Comment, "test_comment"))  #评论
+	suite.addTest(unittest.makeSuite(Album, "test_album"))  #专辑管理
 
 	# 获取当前时间
 	now = time.strftime("%Y-%m-%d %H_%M_%S")
@@ -41,6 +42,4 @@ if __name__ == '__main__':
 	#定义测试报告
 	runner = HTMLTestRunner(stream=fp, title='下载测试报告', description='用例执行情况：')
 	runner.run(suite) # 运行测试用例
-	fp.close() # 关闭报告文件
-
-	
+	fp.close()  # 关闭报告文件

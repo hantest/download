@@ -49,7 +49,4 @@ class LoginPage(Page):
 		self.username()
 		self.password()
 		self.login_button()
-		#截取当前窗口，并指定截图图片的保存位置
-		self.driver.get_screenshot_as_file("D:\\download\\download5\\img\\login_img.jpg")
-		
 		sleep(3)
