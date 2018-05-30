@@ -6,10 +6,10 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.action_chains import ActionChains
 from time import sleep
-import unittest, sys, io
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='utf-8') #解决乱码问题
+import unittest, io, sys
 from .base import Page
 from .login_page import LoginPage
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='utf-8') #解决乱码问题
 
 #
 # 页面：二级导航-我的资源页
