@@ -1,8 +1,8 @@
 # coding=utf-8
 
-from selenium import webdriver
+#from selenium import webdriver
 from HTMLTestRunner import HTMLTestRunner
-import unittest, time, os
+import unittest, time
 from test_case.login_case import Login
 from test_case.logout_case import Logout
 from test_case.collect_case import Collect
