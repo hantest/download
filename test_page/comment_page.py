@@ -13,7 +13,7 @@ from .downloadvip_page import DownloadVipPage
 
 
 #
-# 页面：下载评论
+# 用例：下载评论
 # time:2018-5-24
 # @HAN
 #
@@ -41,12 +41,11 @@ class CommentPage(Page):
 
 	def comment_page(self):
 		''' 资源评论 '''
+
 		DownloadVipPage(self.driver).downloadvip_page()
 		self.driver.refresh() #刷新页面
-		self.driver.get_screenshot_as_file("D:\\download\\download5\\img\\commentQ_img.jpg") #评论之前截图
 		self.download_top()
 		self.commentbox()
 		self.cc_body()
 		self.btn_red()
-		self.driver.get_screenshot_as_file("D:\\download\\download5\\img\\commentH_img.jpg") #评论后截图
 		sleep(3)

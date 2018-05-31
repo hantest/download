@@ -12,7 +12,7 @@ from .login_page import LoginPage
 
 
 #
-# 页面：VIP下载
+# 用例：VIP下载
 # time:2018-5-24
 # @HAN
 #
@@ -56,9 +56,6 @@ class DownloadVipPage(Page):
 				self.driver.switch_to_window(handle)
 				self.direct_download()  #点击下载按钮
 				self.vipIgnoreP()  #弹出框定位
-				sleep(2)
-				self.driver.get_screenshot_as_file("D:\\download\\download5\\img\\downloadVipQ_img.jpg")
 				self.vip_btn()  #点击弹框中VIP下载按钮
-				self.driver.get_screenshot_as_file("D:\\download\\download5\\img\\downloadVipH_img.jpg")
 				sleep(3)
 

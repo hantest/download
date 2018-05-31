@@ -1,10 +1,6 @@
 # coding=utf-8
 
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.action_chains import ActionChains
-from time import sleep
 import unittest, sys
 sys.path.append("./modles")
 sys.path.append("./test_page")
@@ -19,6 +15,7 @@ from test_page.follow_page import FollowPage
 #
 
 class Follow(myunit.MyTest):
+	''' 关注 '''
 
 	def test_follow(self):
 		''' 关注 '''

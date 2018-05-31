@@ -1,6 +1,5 @@
 # download  
-data:测试数据
-img:测试截图
+data:测试数据  
 models:公共模块  
 report:测试报告  
 test_case:测试用例  

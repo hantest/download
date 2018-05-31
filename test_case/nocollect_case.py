@@ -1,10 +1,6 @@
-# coding=utf-8
+# conding=utf-8
 
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.action_chains import ActionChains
-from time import sleep
 import unittest, sys
 sys.path.append("./modles")
 sys.path.append("./test_page")
@@ -28,4 +24,3 @@ class Nocollect(myunit.MyTest):
 
 if __name__ == "__main__":
 	unittest.main()
-

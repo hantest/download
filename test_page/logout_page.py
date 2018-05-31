@@ -6,13 +6,13 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.action_chains import ActionChains
 from time import sleep
-import unittest, sys
+import unittest
 from .base import Page
 from .login_page import LoginPage
 
 #
-# 页面：退出页面
-# time：2018-5-29
+# 用例：退出
+# time：2018-5-31
 # @HAN
 #
 
@@ -26,9 +26,10 @@ class LogoutPage(Page):
 	def logout_page(self):
 		''' 退出 '''
 		LoginPage(self.driver).login_page()
-		link = self.driver.find_element_by_class_name("loginCenter") #头像悬浮
+		link = self.driver.find_element_by_class_name("loginCenter")
 		ActionChains(self.driver).move_to_element(link).perform()
-		sleep(3)
-		self.driver.get_screenshot_as_file("D:\\download\\download5\\img\\logoutQ_img.jpg") #悬浮操作截取图片
+		sleep(2)
+		imgurl = "./img/"
+		self.driver.get_screenshot_as_file(imgurl + "logputQ_img.jpg")
 		self.logout()
-		self.driver.get_screenshot_as_file("D:\\download\\download5\\img\\logoutH_img.jpg") #退出操作截取图片
+		self.driver.get_screenshot_as_file(imgurl + "logoutH_img.jpg")

@@ -5,20 +5,20 @@ import unittest, sys
 sys.path.append("./modles")
 sys.path.append("./test_page")
 from models import myunit
-from test_page.logout_page import LogoutPage
+from test_page.album_page import AlbumPage
 
 #
-# 用例：退出
+# 功能：专辑管理-编辑（不修改内容直接提交）
 # time：2018-5-31
 # @HAN
 #
 
-class Logout(myunit.MyTest):
-	''' 退出 '''
+class Album(myunit.MyTest):
+	''' 专辑管理-编辑 '''
 
-	def test_logout(self):
-		''' 退出 '''
-		LogoutPage(self.driver).logout_page()
+	def test_album(self):
+		''' 专辑管理 '''
+		AlbumPage(self.driver).album_page()
 
 	def tearDown(self):
 		self.driver.quit()

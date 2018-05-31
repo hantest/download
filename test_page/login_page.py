@@ -10,7 +10,7 @@ import unittest, sys
 from .base import Page
 
 #
-# 页面：登录
+# 用例：登录
 # time:2018-4-25
 # @HAN
 #

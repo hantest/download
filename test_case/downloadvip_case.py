@@ -22,10 +22,10 @@ class DownloadVip(myunit.MyTest):
 	def test_download_vip(self):
 		''' VIP用户下载 '''
 		DownloadVipPage(self.driver).downloadvip_page()
-		
 
 	def tearDown(self):
 		self.driver.quit()
+
 
 if __name__  == "__main__":
 	unittest.main()
