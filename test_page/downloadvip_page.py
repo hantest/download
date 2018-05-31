@@ -86,6 +86,3 @@ class DownloadVipPage(Page):
 				self.driver.get_screenshot_as_file("./img/downVip_img.jpg")
 				self.vip_btn()  #点击弹框中VIP下载按钮
 				sleep(3)
-
-
-

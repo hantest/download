@@ -17,7 +17,6 @@ from .login_page import LoginPage
 #
 class CollectPage(Page):
 
-
 		#url = "/"
 		zx_list_loc = (By.XPATH, "/html/body/div[4]/div[2]/div[2]/div/div[1]/ul/li[2]")  #最新上传tab
 		detail_list_loc = (By.XPATH, "/html/body/div[4]/div[2]/div[2]/div/div[2]/div[2]/div/dl[1]")
