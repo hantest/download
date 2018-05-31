@@ -28,8 +28,9 @@ if __name__ == '__main__':
 	#suite.addTest(unittest.makeSuite(Login,"test_login"))  #登陆
 	#suite.addTest(unittest.makeSuite(Logout,"test_logout")) #退出
 	#suite.addTest(unittest.makeSuite(Collect,"test_collect")) #收藏
-	suite.addTest(unittest.makeSuite(Nocollect,"test_nocollect")) #取消收藏
-	#suite.addTest(unittest.makeSuite(DownloadVip,"test_download_vip")) #VIP用户下载
+	#suite.addTest(unittest.makeSuite(Nocollect,"test_nocollect")) #取消收藏
+	#suite.addTest(unittest.makeSuite(DownloadVip,"test_downloady_vip")) #VIP页面下载
+	#suite.addTest(unittest.makeSuite(DownloadVip,"test_downloadg_vip")) #VIP跟随菜单下载
 	#suite.addTest(unittest.makeSuite(Follow,"test_follow"))  #关注
 	#suite.addTest(unittest.makeSuite(Comment,"test_comment"))  #评论
 	#suite.addTest(unittest.makeSuite(Album,"test_album"))  #专辑管理

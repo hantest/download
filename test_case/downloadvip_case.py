@@ -18,10 +18,15 @@ from test_page.downloadvip_page import DownloadVipPage
 # @HAN
 #
 class DownloadVip(myunit.MyTest):
+	''' VIP下载 '''
 
-	def test_download_vip(self):
-		''' VIP用户下载 '''
-		DownloadVipPage(self.driver).downloadvip_page()
+	def test_downloady_vip(self):
+		''' 页面VIP按钮 '''
+		DownloadVipPage(self.driver).downloadvipy_page()
+
+	def test_downloadg_vip(self):
+		''' 跟随菜单VIP按钮 '''
+		DownloadVipPage(self.driver).downloadvipg_page()
 
 	def tearDown(self):
 		self.driver.quit()
