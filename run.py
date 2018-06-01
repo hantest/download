@@ -12,6 +12,7 @@ from test_case.downloadvip_case import DownloadVip
 from test_case.follow_case import Follow
 from test_case.comment_case import Comment
 from test_case.album_case import Album
+from test_case.search_case import Search
                                                                                            
 
 
@@ -27,12 +28,16 @@ if __name__ == '__main__':
 	suite = unittest.TestSuite()
 
 	#suite.addTest(unittest.makeSuite(Login,"test_login"))  #登陆
-	suite.addTest(unittest.makeSuite(Login,"test_login"))  #登陆用例
 	#suite.addTest(unittest.makeSuite(Logout,"test_logout")) #退出
+	suite.addTest(unittest.makeSuite(Search,"test_search"))  #首页搜索
 	#suite.addTest(unittest.makeSuite(Collect,"test_collect")) #收藏
 	#suite.addTest(unittest.makeSuite(Nocollect,"test_nocollect")) #取消收藏
+	
+	#suite.addTest(unittest.makeSuite(DownloadVip,"test_download")) #VIP下载
 	#suite.addTest(unittest.makeSuite(DownloadVip,"test_downloady_vip")) #VIP页面下载
 	#suite.addTest(unittest.makeSuite(DownloadVip,"test_downloadg_vip")) #VIP跟随菜单下载
+	#suite.addTest(unittest.makeSuite(DownloadVip,"test_downloadx_vip"))  #VIP相关推荐下载
+	#
 	#suite.addTest(unittest.makeSuite(Follow,"test_follow"))  #关注
 	#suite.addTest(unittest.makeSuite(Comment,"test_comment"))  #评论
 	#suite.addTest(unittest.makeSuite(Album,"test_album"))  #专辑管理

@@ -42,7 +42,7 @@ class MyalbumPage(Page):
 		LoginPage(self.driver).login_page()
 		self.my_resource()
 		self.my_album()
-		self.driver.get_screenshot_as_file("D:\\download\\download5\\img\\myalbum_img.jpg")
+		self.driver.get_screenshot_as_file("./img/myalbum_img.jpg")
 		self.flag()
 
 		#多窗口切换
@@ -52,7 +52,7 @@ class MyalbumPage(Page):
 		for handle in all_handle:
 			if handle != now_handle:
 				self.driver.switch_to_window(handle)  #切换到制定的页面
-				self.driver.get_screenshot_as_file("D:\\download\\download5\\img\\myalbumH_img.jpg")
+				self.driver.get_screenshot_as_file("./img/myalbumH_img.jpg")
 				self.submit_btn()
 				sleep(3)
 

@@ -50,6 +50,5 @@ class FollowPage(Page):
 			if handle != now_handle:
 				self.driver.switch_to_window(handle)
 				self.attention_btn()
-				imgurl = "./img/"
-				self.driver.get_screenshot_as_file(imgurl + "follow_img.jpg")
+				self.driver.get_screenshot_as_file("./img/follow_img.jpg")
 				sleep(3)

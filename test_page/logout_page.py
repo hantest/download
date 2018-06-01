@@ -29,7 +29,9 @@ class LogoutPage(Page):
 		link = self.driver.find_element_by_class_name("loginCenter")
 		ActionChains(self.driver).move_to_element(link).perform()
 		sleep(2)
-		imgurl = "./img/"
-		self.driver.get_screenshot_as_file(imgurl + "logputQ_img.jpg")
+		imgurl = ""
+		self.driver.get_screenshot_as_file("./img/logputQ_img.jpg")
 		self.logout()
-		self.driver.get_screenshot_as_file(imgurl + "logoutH_img.jpg")
+		self.driver.get_screenshot_as_file("./img/logoutH_img.jpg")
+
+		

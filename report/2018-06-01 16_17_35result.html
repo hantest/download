@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>下载测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2018-05-31 19:12:23</p>
-<p class='attribute'><strong>Duration:</strong> 0:02:08.692361</p>
-<p class='attribute'><strong>Status:</strong> Pass 3 Error 2</p>
+<p class='attribute'><strong>Start Time:</strong> 2018-06-01 16:17:35</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:35.062005</p>
+<p class='attribute'><strong>Status:</strong> Error 1</p>
 
 <p class='description'>用例执行情况：</p>
 </div>
@@ -222,106 +222,45 @@ function showOutput(id, name) {
 </tr>
 
 <tr class='errorClass'>
-    <td>test_case.login1_case.Login:  用户登录 </td>
-    <td>5</td>
-    <td>3</td>
+    <td>test_case.search_case.Search:  首页-搜索 </td>
+    <td>1</td>
     <td>0</td>
-    <td>2</td>
-    <td><a href="javascript:showClassDetail('c1',5)">Detail</a></td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
 </tr>
 
-<tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_login1: 用户名、密码为空</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='pt1.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_login2: 用户名正确，密码为空</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='pt1.3' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_login3: 用户名为空，密码正确</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='ft1.4' class='none'>
-    <td class='errorCase'><div class='testcase'>test_login4: 用户名与密码不匹配</div></td>
+<tr id='ft1.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_search: ' 搜索</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.4')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
         error</a>
 
-    <div id='div_ft1.4' class="popup_window">
+    <div id='div_ft1.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.4').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft1.4: Traceback (most recent call last):
-  File "D:\download\download5\test_case\login1_case.py", line 45, in test_login4
-    character = random.choice("abcdefghijk")  #随机取一个字符
-NameError: name 'random' is not defined
+ft1.1: Traceback (most recent call last):
+  File "D:\download\download5\test_case\search_case.py", line 21, in test_search
+    SearchPage(self.driver).search_page()
+  File "D:\download\download5\test_page\search_page.py", line 45, in search_page
+    self.zdxz_list()
+  File "D:\download\download5\test_page\search_page.py", line 36, in zdxz_list
+    self.find_element(*self.zdxz_list).click()
+TypeError: find_element() argument after * must be a sequence, not method
 Traceback (most recent call last):
-  File "D:\download\download5\test_case\login1_case.py", line 45, in test_login4
-    character = random.choice("abcdefghijk")  #随机取一个字符
-NameError: name 'random' is not defined
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr id='ft1.5' class='none'>
-    <td class='errorCase'><div class='testcase'>test_login5: 用户名密码正确</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.5')" >
-        error</a>
-
-    <div id='div_ft1.5' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.5').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft1.5: Traceback (most recent call last):
-  File "D:\download\download5\test_case\login1_case.py", line 55, in test_login5
-    self.assertEqual(self.driver.find_element_by_class_name("cpongo8").text, u"cpongo8", msg="fail")
-  File "C:\python36\lib\site-packages\selenium-3.4.3-py3.5.egg\selenium\webdriver\remote\webdriver.py", line 433, in find_element_by_class_name
-    return self.find_element(by=By.CLASS_NAME, value=name)
-  File "C:\python36\lib\site-packages\selenium-3.4.3-py3.5.egg\selenium\webdriver\remote\webdriver.py", line 791, in find_element
-    'value': value})['value']
-  File "C:\python36\lib\site-packages\selenium-3.4.3-py3.5.egg\selenium\webdriver\remote\webdriver.py", line 256, in execute
-    self.error_handler.check_response(response)
-  File "C:\python36\lib\site-packages\selenium-3.4.3-py3.5.egg\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"class name","selector":"cpongo8"}
-  (Session info: chrome=58.0.3029.81)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-
-Traceback (most recent call last):
-  File "D:\download\download5\test_case\login1_case.py", line 55, in test_login5
-    self.assertEqual(self.driver.find_element_by_class_name("cpongo8").text, u"cpongo8", msg="fail")
-  File "C:\python36\lib\site-packages\selenium-3.4.3-py3.5.egg\selenium\webdriver\remote\webdriver.py", line 433, in find_element_by_class_name
-    return self.find_element(by=By.CLASS_NAME, value=name)
-  File "C:\python36\lib\site-packages\selenium-3.4.3-py3.5.egg\selenium\webdriver\remote\webdriver.py", line 791, in find_element
-    'value': value})['value']
-  File "C:\python36\lib\site-packages\selenium-3.4.3-py3.5.egg\selenium\webdriver\remote\webdriver.py", line 256, in execute
-    self.error_handler.check_response(response)
-  File "C:\python36\lib\site-packages\selenium-3.4.3-py3.5.egg\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"class name","selector":"cpongo8"}
-  (Session info: chrome=58.0.3029.81)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-
+  File "D:\download\download5\test_case\search_case.py", line 21, in test_search
+    SearchPage(self.driver).search_page()
+  File "D:\download\download5\test_page\search_page.py", line 45, in search_page
+    self.zdxz_list()
+  File "D:\download\download5\test_page\search_page.py", line 36, in zdxz_list
+    self.find_element(*self.zdxz_list).click()
+TypeError: find_element() argument after * must be a sequence, not method
 
 
         </pre>
@@ -333,10 +272,10 @@ selenium.common.exceptions.NoSuchElementException: Message: no such element: Una
 
 <tr id='total_row'>
     <td>Total</td>
-    <td>5</td>
-    <td>3</td>
+    <td>1</td>
     <td>0</td>
-    <td>2</td>
+    <td>0</td>
+    <td>1</td>
     <td>&nbsp;</td>
 </tr>
 </table>

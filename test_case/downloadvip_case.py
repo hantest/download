@@ -28,6 +28,11 @@ class DownloadVip(myunit.MyTest):
 		''' 跟随菜单VIP按钮 '''
 		DownloadVipPage(self.driver).downloadvipg_page()
 
+	def test_downloadx_vip(self):
+		''' 相关推荐下载 '''
+		DownloadVipPage(self.driver).downloadvipx_page()
+		
+
 	def tearDown(self):
 		self.driver.quit()
 
