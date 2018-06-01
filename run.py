@@ -3,11 +3,11 @@
 from selenium import webdriver
 from HTMLTestRunner import HTMLTestRunner
 import unittest, time, os
-#from test_case.login_case import Login
 from test_case.login1_case import Login
 from test_case.logout_case import Logout
 from test_case.collect_case import Collect
 from test_case.nocollect_case import Nocollect
+from test_case.report_case import Report
 from test_case.downloadvip_case import DownloadVip
 from test_case.follow_case import Follow
 from test_case.comment_case import Comment
@@ -29,10 +29,10 @@ if __name__ == '__main__':
 
 	#suite.addTest(unittest.makeSuite(Login,"test_login"))  #登陆
 	#suite.addTest(unittest.makeSuite(Logout,"test_logout")) #退出
-	suite.addTest(unittest.makeSuite(Search,"test_search"))  #首页搜索
+	#suite.addTest(unittest.makeSuite(Search,"test_search"))  #首页搜索
 	#suite.addTest(unittest.makeSuite(Collect,"test_collect")) #收藏
 	#suite.addTest(unittest.makeSuite(Nocollect,"test_nocollect")) #取消收藏
-	
+	suite.addTest(unittest.makeSuite(Report,"test_report"))  #举报
 	#suite.addTest(unittest.makeSuite(DownloadVip,"test_download")) #VIP下载
 	#suite.addTest(unittest.makeSuite(DownloadVip,"test_downloady_vip")) #VIP页面下载
 	#suite.addTest(unittest.makeSuite(DownloadVip,"test_downloadg_vip")) #VIP跟随菜单下载
