@@ -189,8 +189,8 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>下载测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2018-06-01 18:41:44</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:53.296049</p>
+<p class='attribute'><strong>Start Time:</strong> 2018-06-04 11:26:28</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:26.988544</p>
 <p class='attribute'><strong>Status:</strong> Error 1</p>
 
 <p class='description'>用例执行情况：</p>
@@ -231,7 +231,7 @@ function showOutput(id, name) {
 </tr>
 
 <tr id='ft1.1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_report: 未下载举报</div></td>
+    <td class='errorCase'><div class='testcase'>test_report2: 举报自己的资源</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -246,17 +246,17 @@ function showOutput(id, name) {
         <pre>
         
 ft1.1: Traceback (most recent call last):
-  File "D:\download\download5\test_case\report_case.py", line 21, in test_report
-    ReportPage(self.driver).report_page1()
-  File "D:\download\download5\test_page\report_page.py", line 80, in report_page1
-    self.get_screenshot_as_file("./img/report1.jpg")
-AttributeError: 'ReportPage' object has no attribute 'get_screenshot_as_file'
+  File "D:\download\download5\test_case\report_case.py", line 25, in test_report2
+    ReportPage(self.driver).report_myresource_page()
+  File "D:\download\download5\test_page\report_page.py", line 99, in report_myresource_page
+    for handle in all_handle:
+NameError: name 'all_handle' is not defined
 Traceback (most recent call last):
-  File "D:\download\download5\test_case\report_case.py", line 21, in test_report
-    ReportPage(self.driver).report_page1()
-  File "D:\download\download5\test_page\report_page.py", line 80, in report_page1
-    self.get_screenshot_as_file("./img/report1.jpg")
-AttributeError: 'ReportPage' object has no attribute 'get_screenshot_as_file'
+  File "D:\download\download5\test_case\report_case.py", line 25, in test_report2
+    ReportPage(self.driver).report_myresource_page()
+  File "D:\download\download5\test_page\report_page.py", line 99, in report_myresource_page
+    for handle in all_handle:
+NameError: name 'all_handle' is not defined
 
 
         </pre>

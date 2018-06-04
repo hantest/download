@@ -32,7 +32,7 @@ if __name__ == '__main__':
 	#suite.addTest(unittest.makeSuite(Search,"test_search"))  #首页搜索
 	#suite.addTest(unittest.makeSuite(Collect,"test_collect")) #收藏
 	#suite.addTest(unittest.makeSuite(Nocollect,"test_nocollect")) #取消收藏
-	suite.addTest(unittest.makeSuite(Report,"test_report"))  #举报
+	suite.addTest(unittest.makeSuite(Report,"test_report3"))  #举报
 	#suite.addTest(unittest.makeSuite(DownloadVip,"test_download")) #VIP下载
 	#suite.addTest(unittest.makeSuite(DownloadVip,"test_downloady_vip")) #VIP页面下载
 	#suite.addTest(unittest.makeSuite(DownloadVip,"test_downloadg_vip")) #VIP跟随菜单下载

@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>下载测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2018-06-01 16:17:35</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:35.062005</p>
-<p class='attribute'><strong>Status:</strong> Error 1</p>
+<p class='attribute'><strong>Start Time:</strong> 2018-06-04 16:28:01</p>
+<p class='attribute'><strong>Duration:</strong> 0:01:05.868768</p>
+<p class='attribute'><strong>Status:</strong> Pass 1</p>
 
 <p class='description'>用例执行情况：</p>
 </div>
@@ -221,61 +221,26 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='errorClass'>
-    <td>test_case.search_case.Search:  首页-搜索 </td>
+<tr class='passClass'>
+    <td>test_case.report_case.Report:  举报 </td>
+    <td>1</td>
     <td>1</td>
     <td>0</td>
     <td>0</td>
-    <td>1</td>
     <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
 </tr>
 
-<tr id='ft1.1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_search: ' 搜索</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
-        error</a>
-
-    <div id='div_ft1.1' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft1.1: Traceback (most recent call last):
-  File "D:\download\download5\test_case\search_case.py", line 21, in test_search
-    SearchPage(self.driver).search_page()
-  File "D:\download\download5\test_page\search_page.py", line 45, in search_page
-    self.zdxz_list()
-  File "D:\download\download5\test_page\search_page.py", line 36, in zdxz_list
-    self.find_element(*self.zdxz_list).click()
-TypeError: find_element() argument after * must be a sequence, not method
-Traceback (most recent call last):
-  File "D:\download\download5\test_case\search_case.py", line 21, in test_search
-    SearchPage(self.driver).search_page()
-  File "D:\download\download5\test_page\search_page.py", line 45, in search_page
-    self.zdxz_list()
-  File "D:\download\download5\test_page\search_page.py", line 36, in zdxz_list
-    self.find_element(*self.zdxz_list).click()
-TypeError: find_element() argument after * must be a sequence, not method
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_report3: 下载资源后举报</div></td>
+    <td colspan='5' align='center'>pass</td>
 </tr>
 
 <tr id='total_row'>
     <td>Total</td>
     <td>1</td>
-    <td>0</td>
-    <td>0</td>
     <td>1</td>
+    <td>0</td>
+    <td>0</td>
     <td>&nbsp;</td>
 </tr>
 </table>

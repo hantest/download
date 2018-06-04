@@ -20,7 +20,13 @@ class Report(myunit.MyTest):
 		''' 未下载举报 '''
 		ReportPage(self.driver).report_notdownload_page()
 
-	
+	def test_report2(self):
+		''' 举报自己的资源 '''
+		ReportPage(self.driver).report_myresource_page()
+
+	def test_report3(self):
+		''' 下载资源后举报 '''
+		ReportPage(self.driver).report_download_page()
 
 
 	def tearDown(self):
