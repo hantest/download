@@ -13,7 +13,7 @@ from .downloadvip_page import DownloadVipPage
 
 #
 # 功能：资源举报
-# 用例：1、未下载资源举报 2、举报自己的资源 3、下载后举报 4、资源已经被举报过
+# 用例：1、未下载资源举报 2、举报自己的资源 3、下载后举报，被举报后再次举报 4、举报后直接点击取消
 # time:2018-6-1
 # @HAN
 #
@@ -38,6 +38,7 @@ class ReportPage(Page):
 	report_option_loc = (By.XPATH, "//*[@id='report_type']/option[3]")  # 选额举报类型
 	report_description_loc = (By.ID, "report_description")  #详细原因
 	btn_submit_loc = (By.ID, "btn_submit")  #提交按钮
+	cancel_loc = (By.XPATH, "//*[@id='reportform']/div[2]/button[1]")  #取消按钮
 	dlReport_close_loc = (By.XPATH, "//*[@id='dlReport']/i")  #下载举报弹框关闭按钮
 
 
@@ -83,12 +84,16 @@ class ReportPage(Page):
 	def btn_submit(self):
 		self.find_element(*self.btn_submit_loc).click()
 
+	def cancel(self):
+		self.find_element(*self.cancel_loc).click()
+
 	def dlReport_close(self):
 		self.find_element(*self.dlReport_close_loc).click()
 
 
 	def report_notdownload_page(self):
 		''' 未下载资源举报 '''
+
 		LoginPage(self.driver).login_page()
 		self.zx_list()
 		self.detail_list()
@@ -96,7 +101,6 @@ class ReportPage(Page):
 		#多窗口切换
 		now_handle = self.driver.current_window_handle  #获取当前窗口
 		all_handle = self.driver.window_handles  #获取全部窗口句柄集合
-
 		for handle in all_handle:
 			if handle != now_handle:
 				self.driver.switch_to_window(handle)  #切换到制定的页面
@@ -107,8 +111,10 @@ class ReportPage(Page):
 				self.download_close()
 
 
+
 	def report_myresource_page(self):
 		''' 举报自己的资源 '''
+
 		LoginPage(self.driver).login_page()
 		self.my_resource()
 		self.my_list()
@@ -116,7 +122,6 @@ class ReportPage(Page):
 		#多窗口切换
 		now_handle = self.driver.current_window_handle  #获取当前窗口
 		all_handle = self.driver.window_handles  #获取全部窗口句柄集合
-
 		for handle in all_handle:
 			if handle != now_handle:
 				self.driver.switch_to_window(handle)  #切换到制定的页面
@@ -127,10 +132,22 @@ class ReportPage(Page):
 				self.myself_close()
 
 
+
+	def report_not_modify_page(self):
+		''' 举报不修改内容，直接点击取消 '''
+
+		DownloadVipPage(self.driver).downloadvipy_page()
+		self.report()
+		self.dlReport()
+		sleep(3)
+		self.cancel()
+		self.driver.get_screenshot_as_file("./img/举报取消.jpg")
+
+
 	def report_download_page(self):
 		''' 下载资源后举报,已经被举报过再次举报 '''
-		DownloadVipPage(self.driver).downloadvipy_page()
 
+		DownloadVipPage(self.driver).downloadvipy_page()
 		self.report()
 		self.dlReport()
 		self.report_type()
