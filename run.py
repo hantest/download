@@ -13,7 +13,7 @@ from test_case.follow_case import Follow
 from test_case.comment_case import Comment
 from test_case.album_case import Album
 from test_case.search_case import Search
-                                                                                           
+from test_case.jp_album_case import Jpalbum                                                
 
 
 
@@ -32,7 +32,7 @@ if __name__ == '__main__':
 	#suite.addTest(unittest.makeSuite(Search,"test_search"))  #首页搜索
 	#suite.addTest(unittest.makeSuite(Collect,"test_collect")) #收藏
 	#suite.addTest(unittest.makeSuite(Nocollect,"test_nocollect")) #取消收藏
-	suite.addTest(unittest.makeSuite(Report,"test_report3"))  #举报
+	#suite.addTest(unittest.makeSuite(Report,"test_report"))  #举报
 	#suite.addTest(unittest.makeSuite(DownloadVip,"test_download")) #VIP下载
 	#suite.addTest(unittest.makeSuite(DownloadVip,"test_downloady_vip")) #VIP页面下载
 	#suite.addTest(unittest.makeSuite(DownloadVip,"test_downloadg_vip")) #VIP跟随菜单下载
@@ -41,6 +41,7 @@ if __name__ == '__main__':
 	#suite.addTest(unittest.makeSuite(Follow,"test_follow"))  #关注
 	#suite.addTest(unittest.makeSuite(Comment,"test_comment"))  #评论
 	#suite.addTest(unittest.makeSuite(Album,"test_album"))  #专辑管理
+	suite.addTest(unittest.makeSuite(Jpalbum,"test_jp_album"))  #专辑管理
 
 
 	# 获取当前时间
@@ -54,5 +55,3 @@ if __name__ == '__main__':
 	runner = HTMLTestRunner(stream=fp, title='下载测试报告', description='用例执行情况：')
 	runner.run(suite) # 运行测试用例
 	fp.close() # 关闭报告文件
-
-	

@@ -11,7 +11,7 @@ from .base import Page
 from .login_page import LoginPage
 
 #
-# 用例：收藏资源、取消收藏
+# 用例：收藏资源
 # time:2018-5-28
 # @HAN
 #
