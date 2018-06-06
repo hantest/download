@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>下载测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2018-06-04 11:30:54</p>
-<p class='attribute'><strong>Duration:</strong> 0:02:10.367456</p>
-<p class='attribute'><strong>Status:</strong> Pass 2</p>
+<p class='attribute'><strong>Start Time:</strong> 2018-06-06 14:49:48</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:59.113381</p>
+<p class='attribute'><strong>Status:</strong> Error 1</p>
 
 <p class='description'>用例执行情况：</p>
 </div>
@@ -221,31 +221,57 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='passClass'>
-    <td>test_case.report_case.Report:  举报 </td>
-    <td>2</td>
-    <td>2</td>
+<tr class='errorClass'>
+    <td>test_case.follow_case.Follow:  关注 </td>
+    <td>1</td>
     <td>0</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c1',2)">Detail</a></td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
 </tr>
 
-<tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_report1: 未下载举报</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
+<tr id='ft1.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_follow: 关注</div></td>
+    <td colspan='5' align='center'>
 
-<tr id='pt1.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_report2: 举报自己的资源</div></td>
-    <td colspan='5' align='center'>pass</td>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
+        error</a>
+
+    <div id='div_ft1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.1: Traceback (most recent call last):
+  File "D:\download\download5\test_case\follow_case.py", line 23, in test_follow
+    FollowPage(self.driver).follow_page()
+  File "D:\download\download5\test_page\follow_page.py", line 53, in follow_page
+    fllow = self.driver.find_element_by_class_name("attention_btn").text()
+TypeError: 'str' object is not callable
+Traceback (most recent call last):
+  File "D:\download\download5\test_case\follow_case.py", line 23, in test_follow
+    FollowPage(self.driver).follow_page()
+  File "D:\download\download5\test_page\follow_page.py", line 53, in follow_page
+    fllow = self.driver.find_element_by_class_name("attention_btn").text()
+TypeError: 'str' object is not callable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
 <tr id='total_row'>
     <td>Total</td>
-    <td>2</td>
-    <td>2</td>
+    <td>1</td>
     <td>0</td>
     <td>0</td>
+    <td>1</td>
     <td>&nbsp;</td>
 </tr>
 </table>

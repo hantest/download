@@ -37,11 +37,12 @@ if __name__ == '__main__':
 	#suite.addTest(unittest.makeSuite(DownloadVip,"test_downloady_vip")) #VIP页面下载
 	#suite.addTest(unittest.makeSuite(DownloadVip,"test_downloadg_vip")) #VIP跟随菜单下载
 	#suite.addTest(unittest.makeSuite(DownloadVip,"test_downloadx_vip"))  #VIP相关推荐下载
-	#
+
 	#suite.addTest(unittest.makeSuite(Follow,"test_follow"))  #关注
+	suite.addTest(unittest.makeSuite(Follow,"test_not_follow")) #取消关注
 	#suite.addTest(unittest.makeSuite(Comment,"test_comment"))  #评论
 	#suite.addTest(unittest.makeSuite(Album,"test_album"))  #专辑管理
-	suite.addTest(unittest.makeSuite(Jpalbum,"test_jp_album"))  #专辑管理
+	#suite.addTest(unittest.makeSuite(Jpalbum,"test_jp_album"))  #专辑管理
 
 
 	# 获取当前时间

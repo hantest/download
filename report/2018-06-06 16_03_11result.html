@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>下载测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2018-06-01 18:45:02</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:55.665184</p>
-<p class='attribute'><strong>Status:</strong> Pass 1</p>
+<p class='attribute'><strong>Start Time:</strong> 2018-06-06 16:03:11</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:37.198128</p>
+<p class='attribute'><strong>Status:</strong> Error 1</p>
 
 <p class='description'>用例执行情况：</p>
 </div>
@@ -221,26 +221,57 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='passClass'>
-    <td>test_case.report_case.Report:  举报 </td>
-    <td>1</td>
+<tr class='errorClass'>
+    <td>test_case.follow_case.Follow:  关注 </td>
     <td>1</td>
     <td>0</td>
     <td>0</td>
+    <td>1</td>
     <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
 </tr>
 
-<tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_report: 未下载举报</div></td>
-    <td colspan='5' align='center'>pass</td>
+<tr id='ft1.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_not_follow: 取消关注</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
+        error</a>
+
+    <div id='div_ft1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.1: Traceback (most recent call last):
+  File "D:\download\download5\test_case\follow_case.py", line 28, in test_not_follow
+    FollowPage(self.driver).not_follow_page()
+  File "D:\download\download5\test_page\follow_page.py", line 91, in not_follow_page
+    self.head_loc()
+TypeError: 'tuple' object is not callable
+Traceback (most recent call last):
+  File "D:\download\download5\test_case\follow_case.py", line 28, in test_not_follow
+    FollowPage(self.driver).not_follow_page()
+  File "D:\download\download5\test_page\follow_page.py", line 91, in not_follow_page
+    self.head_loc()
+TypeError: 'tuple' object is not callable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
 <tr id='total_row'>
     <td>Total</td>
     <td>1</td>
+    <td>0</td>
+    <td>0</td>
     <td>1</td>
-    <td>0</td>
-    <td>0</td>
     <td>&nbsp;</td>
 </tr>
 </table>
