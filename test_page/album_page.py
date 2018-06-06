@@ -51,8 +51,7 @@ class AlbumPage(Page):
 		for handle in all_handle:
 			if handle != now_handle:
 				self.driver.switch_to_window(handle)
-				imgurl = "./img/"
-				self.driver.get_screenshot_as_file(imgurl + "album_img.jpg")
+				self.driver.get_screenshot_as_file("./img/album_img.jpg")
 				self.submit_btn()
 				sleep(2)
 
