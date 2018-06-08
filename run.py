@@ -13,7 +13,8 @@ from test_case.follow_case import Follow
 from test_case.comment_case import Comment
 from test_case.album_case import Album
 from test_case.search_case import Search
-from test_case.jp_album_case import Jpalbum                                                
+from test_case.jp_album_case import Jpalbum
+from test_case.rank_case import Rank                                               
 
 
 
@@ -43,8 +44,9 @@ if __name__ == '__main__':
 	#suite.addTest(unittest.makeSuite(Follow,"test_not_follow")) #取消关注
 	#suite.addTest(unittest.makeSuite(Comment,"test_comment"))  #评论
 	#suite.addTest(unittest.makeSuite(Comment,"test_notdownload_comment")) #资源未下载点击评论
-	suite.addTest(unittest.makeSuite(Comment,"test_download_comment")) #下载资源后评论
-
+	#suite.addTest(unittest.makeSuite(Comment,"test_download_comment")) #下载资源后评论
+	#
+	suite.addTest(unittest.makeSuite(Rank,"test_rank"))  #排行榜
 	#suite.addTest(unittest.makeSuite(Album,"test_album"))  #专辑管理
 	#suite.addTest(unittest.makeSuite(Jpalbum,"test_jp_album"))  #精品专辑-顶部图片切换
 	#suite.addTest(unittest.makeSuite(Jpalbum,"test_album_gx"))  #精品专辑-专辑贡献榜
