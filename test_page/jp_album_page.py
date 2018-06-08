@@ -91,7 +91,25 @@ class JpalbumPage(Page):
 	album_per_name_loc = (By.CLASS_NAME, "album_per_name")  #专辑首页列表用户名
 
 	def album_per_img(self):
-		self.find_element(*self.album_per_img).click()
+		self.find_element(*self.album_per_img_loc).click()
 
 	def album_per_name(self):
-		self.find_element(*self.album_per_name).click()
+		self.find_element(*self.album_per_name_loc).click()
+
+	def album_my_page(self):
+		''' 点击用户头像或用户名跳转到个人中心 '''
+		LoginPage(self.driver).login_page()
+		self.open()
+		self.album_per_img()
+		sleep(3)
+
+		now_handle = self.driver.current_window_handle
+		all_handle = self.driver.window_handles
+		for handle in all_handle:
+			if handle == now_handle:
+				self.driver.switch_to_window(handle)
+				self.album_per_name()
+				sleep(2)
+
+
+

@@ -22,6 +22,10 @@ class Jpalbum(myunit.MyTest):
 	 def test_album_gx(self):
 	 	''' 专辑贡献榜 '''
 	 	JpalbumPage(self.driver).album_gx_page()
+
+	 def test_album_list(self):
+	 	''' 专辑列表-点击用户头像或用户名跳转到个人中心 '''
+	 	JpalbumPage(self.driver).album_my_page()
 	 	
 
 	 def dearDown(self):

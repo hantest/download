@@ -45,6 +45,7 @@ if __name__ == '__main__':
 	#suite.addTest(unittest.makeSuite(Album,"test_album"))  #专辑管理
 	#suite.addTest(unittest.makeSuite(Jpalbum,"test_jp_album"))  #精品专辑-顶部图片切换
 	#suite.addTest(unittest.makeSuite(Jpalbum,"test_album_gx"))  #精品专辑-专辑贡献榜
+	suite.addTest(unittest.makeSuite(Jpalbum,"test_album_list"))  #精品专辑列表-点击用户头像/用户名跳转
 
 	# 获取当前时间
 	now = time.strftime("%Y-%m-%d %H_%M_%S")
