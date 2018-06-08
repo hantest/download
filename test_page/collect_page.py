@@ -51,7 +51,7 @@ class CollectPage(Page):
 			all_handle = self.driver.window_handles  #获取全部窗口句柄集合
 			for handle in all_handle:
 				if handle != now_handle:
-					self.driver.switch_to_window(handle)  #切换到制定的页面
+					self.driver.switch_to_window(handle)  #切换到指定的页面
 					self.favorite()
 					self.dl_lock()
 					self.my_favorite()

@@ -110,6 +110,3 @@ class JpalbumPage(Page):
 				self.driver.switch_to_window(handle)
 				self.album_per_name()
 				sleep(2)
-
-
-
