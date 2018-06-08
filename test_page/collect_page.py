@@ -17,9 +17,9 @@ from .login_page import LoginPage
 #
 class CollectPage(Page):
 
-		#url = "/"
-		zx_list_loc = (By.XPATH, "/html/body/div[4]/div[2]/div[2]/div/div[1]/ul/li[2]")  #最新上传tab
-		detail_list_loc = (By.XPATH, "/html/body/div[4]/div[2]/div[2]/div/div[2]/div[2]/div/dl[1]")
+
+		zx_list_loc = (By.CLASS_NAME, "tab_item")  #最新上传tab
+		detail_list_loc = (By.XPATH, "//*[@class='album_detail_wrap']/dl[1]") #最新上传列表第一个资源
 		favorite_loc = (By.ID, "favorite")  #收藏按钮
 		dl_lock_loc = (By.ID, "dl_lock") #收藏弹出框
 		my_favorite_loc = (By.XPATH, "//*[@id='dl_lock']/h4/a") #弹框中我的收藏
@@ -46,10 +46,10 @@ class CollectPage(Page):
 			LoginPage(self.driver).login_page()
 			self.zx_list()
 			self.detail_list()
+
 			#多窗口切换
 			now_handle = self.driver.current_window_handle  #获取当前窗口
 			all_handle = self.driver.window_handles  #获取全部窗口句柄集合
-
 			for handle in all_handle:
 				if handle != now_handle:
 					self.driver.switch_to_window(handle)  #切换到制定的页面

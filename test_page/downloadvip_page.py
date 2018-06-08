@@ -18,11 +18,11 @@ from .login_page import LoginPage
 #
 class DownloadVipPage(Page):
 
-	url = "/"
-	zx_list_loc = (By.XPATH, "/html/body/div[4]/div[2]/div[2]/div/div[1]/ul/li[2]")  #最新上传tab
-	detail_list_loc = (By.XPATH, "/html/body/div[4]/div[2]/div[2]/div/div[2]/div[2]/div/dl[1]") #第一个资源
+
+	zx_list_loc = (By.CLASS_NAME, "tab_item")  #最新上传tab
+	detail_list_loc = (By.XPATH, "//*[@class='album_detail_wrap']/dl[1]") #最新上传列表第一个资源
 	direct_download_loc = (By.CLASS_NAME, "direct_download") #页面中VIP下载按钮
-	vip_down_loc = (By.XPATH, "/html/body/div[22]/div/div[2]/a")  #跟随菜单中的VIP下载按钮
+	vip_down_loc = (By.XPATH, "//*[@class='follow_menu_r fr']/a")  #跟随菜单中的VIP下载按钮
 	dl_reco_btn_loc = (By.CLASS_NAME, "dl_reco_btn")  #相关推荐立即下载
 	vipIgnoreP_loc = (By.ID, "vipIgnoreP") #下载弹框
 	vip_btn_loc = (By.ID, "vip_btn") #弹框中VIP下载按钮

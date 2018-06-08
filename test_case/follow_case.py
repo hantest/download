@@ -10,7 +10,7 @@ from test_page.follow_page import FollowPage
 
 
 #
-# 用例：关注
+# 用例：关注、取消关注
 # time:2018-4-27
 # @HAN
 #

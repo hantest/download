@@ -17,8 +17,8 @@ from .base import Page
 class LoginPage(Page):
 
 	url = "/"
-	login_loc = (By.XPATH, "/html/body/div[2]/div/div/ul/li[5]/a[1]")  #右上角登陆按钮
-	login_user_loc = (By.XPATH, "/html/body/div[3]/div/div/div[2]/div/h3/a")  #账号登陆
+	login_loc = (By.LINK_TEXT, u"登录")  #右上角登陆按钮
+	login_user_loc = (By.XPATH, "//div[@class='login-part']/h3/a")  #账号登陆
 	username_loc = (By.ID, "username") #账号输入框
 	password_loc = (By.ID, "password") #密码输入框
 	login_button_loc = (By.CLASS_NAME, "logging") #登陆按钮

@@ -17,6 +17,12 @@ class Jpalbum(myunit.MyTest):
 	 def test_jp_album(self):
 	 	''' 顶部图片切换，点击用户名跳转 '''
 	 	JpalbumPage(self.driver).dl_album_page()
+	 	self.assertEqual(self.driver.title, "我的CSDN")
+
+	 def test_album_gx(self):
+	 	''' 专辑贡献榜 '''
+	 	JpalbumPage(self.driver).album_gx_page()
+	 	
 
 	 def dearDown(self):
 	 	self.driver.quit()

@@ -28,6 +28,7 @@ if __name__ == '__main__':
 	suite = unittest.TestSuite()
 
 	#suite.addTest(unittest.makeSuite(Login,"test_login"))  #登陆
+	#suite.addTest(unittest.makeSuite(Login,"test_login5"))
 	#suite.addTest(unittest.makeSuite(Logout,"test_logout")) #退出
 	#suite.addTest(unittest.makeSuite(Search,"test_search"))  #首页搜索
 	#suite.addTest(unittest.makeSuite(Collect,"test_collect")) #收藏
@@ -39,11 +40,11 @@ if __name__ == '__main__':
 	#suite.addTest(unittest.makeSuite(DownloadVip,"test_downloadx_vip"))  #VIP相关推荐下载
 
 	#suite.addTest(unittest.makeSuite(Follow,"test_follow"))  #关注
-	suite.addTest(unittest.makeSuite(Follow,"test_not_follow")) #取消关注
+	#suite.addTest(unittest.makeSuite(Follow,"test_not_follow")) #取消关注
 	#suite.addTest(unittest.makeSuite(Comment,"test_comment"))  #评论
 	#suite.addTest(unittest.makeSuite(Album,"test_album"))  #专辑管理
-	#suite.addTest(unittest.makeSuite(Jpalbum,"test_jp_album"))  #专辑管理
-
+	#suite.addTest(unittest.makeSuite(Jpalbum,"test_jp_album"))  #精品专辑-顶部图片切换
+	#suite.addTest(unittest.makeSuite(Jpalbum,"test_album_gx"))  #精品专辑-专辑贡献榜
 
 	# 获取当前时间
 	now = time.strftime("%Y-%m-%d %H_%M_%S")

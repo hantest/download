@@ -27,11 +27,11 @@ class Report(myunit.MyTest):
 	def test_report3(self):
 		''' 举报后点击取消 '''
 		ReportPage(self.driver).report_not_modify_page()
-
+'''
 	def test_report4(self):
-		''' 下载资源举报,已举报后再次举报 '''
+		 #下载资源举报,已举报后再次举报
 		ReportPage(self.driver).report_download_page()
-
+ '''
 
 	def tearDown(self):
 		self.driver.quit()

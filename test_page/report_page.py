@@ -20,8 +20,8 @@ from .downloadvip_page import DownloadVipPage
 
 class ReportPage(Page):
 
-	zx_list_loc = (By.XPATH, "/html/body/div[4]/div[2]/div[2]/div/div[1]/ul/li[2]")  #最新上传tab
-	detail_list_loc = (By.XPATH, "/html/body/div[4]/div[2]/div[2]/div/div[2]/div[2]/div/dl[1]")  #点击第一个资源
+	zx_list_loc = (By.CLASS_NAME, "tab_item")  #最新上传tab
+	detail_list_loc = (By.XPATH, "//*[@class='album_detail_wrap']/dl[1]") #最新上传列表第一个资源
 
 	report_loc = (By.ID, "download_report") #点击举报按钮
 
@@ -29,7 +29,7 @@ class ReportPage(Page):
 	download_close_loc = (By.XPATH, "//*[@id='download']/i")  # 未下载举报框关闭按钮
 
 	my_resource_loc = (By.LINK_TEXT, u"我的资源") #二级导航-我的资源
-	my_list_loc = (By.XPATH, "/html/body/div[4]/div/div[2]/div[1]/div/div/ul/li[1]/div/div[2]/h3/a") #上传资源TAB-第一个资源
+	my_list_loc = (By.XPATH, "//*[@class='item uresource']/ul/li[1]/div/div[2]/h3/a") #上传资源TAB-第一个资源
 	myself_loc = (By.ID, "myself")  #举报自己的资源弹框定位
 	myself_close_loc = (By.XPATH, "//*[@id='myself']/i")  #举报自己的资源关闭按钮
 
@@ -143,9 +143,10 @@ class ReportPage(Page):
 		self.cancel()
 		self.driver.get_screenshot_as_file("./img/举报取消.jpg")
 
-
+	
+	'''
 	def report_download_page(self):
-		''' 下载资源后举报,已经被举报过再次举报 '''
+		#下载资源后举报,已经被举报过再次举报
 
 		DownloadVipPage(self.driver).downloadvipy_page()
 		self.report()
@@ -160,5 +161,6 @@ class ReportPage(Page):
 		self.report()
 		self.btn_submit()
 		self.driver.get_screenshot_as_file("./img/已经举报过.jpg")
-		sleep(2)
 		self.driver.switch_to_alert().accept()
+		sleep(2)
+	'''

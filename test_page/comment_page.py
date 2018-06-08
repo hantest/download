@@ -18,7 +18,7 @@ from .downloadvip_page import DownloadVipPage
 # @HAN
 #
 
-class CommentPage(Page):
+class CommentPage(Page):  
 
 	url = "/"
 	download_top_loc = (By.XPATH, "//*[@id='download_top']/div[3]/div[2]/a[2]")  # 下载按钮
@@ -41,8 +41,7 @@ class CommentPage(Page):
 
 	def comment_page(self):
 		''' 资源评论 '''
-
-		DownloadVipPage(self.driver).downloadvip_page()
+		DownloadVipPage(self.driver).downloadvipy_page()
 		self.driver.refresh() #刷新页面
 		self.download_top()
 		self.commentbox()

@@ -19,9 +19,9 @@ from .login_page import LoginPage
 
 class FollowPage(Page):
 
-	url = "/"
-	zx_list_loc = (By.XPATH, "/html/body/div[4]/div[2]/div[2]/div/div[1]/ul/li[2]")  #最新上传tab
-	detail_list_loc = (By.XPATH, "/html/body/div[4]/div[2]/div[2]/div/div[2]/div[2]/div/dl[1]") #最新上传第一个资源
+
+	zx_list_loc = (By.CLASS_NAME, "tab_item")  #最新上传tab
+	detail_list_loc = (By.XPATH, "//*[@class='album_detail_wrap']/dl[1]") #最新上传列表第一个资源
 	attention_btn_loc = (By.CLASS_NAME, "attention_btn") #关注
 	head_loc = (By.CLASS_NAME, "head") #右侧用户头像
 	person_add_focus_loc = (By.CLASS_NAME, "person_add_focus") #个人中心取消关注按钮
@@ -56,7 +56,6 @@ class FollowPage(Page):
 		#多窗口切换
 		now_handle = self.driver.current_window_handle  #获取当前窗口
 		all_handle = self.driver.window_handles  #获取所有窗口
-
 		for handle in all_handle:
 			if handle != now_handle:
 				self.driver.switch_to_window(handle)
@@ -89,7 +88,7 @@ class FollowPage(Page):
 					self.attention_btn()
 					self.driver.get_screenshot_as_file("./img/follow_img.jpg")
 					self.head()
-					handles = self.driver.window_handles #获取所有的串口
+					handles = self.driver.window_handles #获取所有的窗口
 					for handle1 in handles:
 						if handle1 != self.driver.current_window_handle:
 							self.driver.close()
@@ -100,7 +99,7 @@ class FollowPage(Page):
 							sleep(3)
 				else:
 					self.head()
-					handles = self.driver.window_handles #获取所有的串口
+					handles = self.driver.window_handles #获取所有的窗口
 					for handle1 in handles:
 						if handle1 != self.driver.current_window_handle:
 							self.driver.close()

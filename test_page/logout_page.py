@@ -18,7 +18,7 @@ from .login_page import LoginPage
 
 class LogoutPage(Page):
 
-	logout_loc = (By.XPATH, "/html/body/div[2]/div/div/ul/li[6]/div[2]/div[6]/a")  #退出按钮
+	logout_loc = (By.XPATH, "//*[@class='userControl']/div[6]/a")  #退出按钮
 
 	def logout(self):
 		self.find_element(*self.logout_loc).click()
@@ -32,5 +32,3 @@ class LogoutPage(Page):
 		self.driver.get_screenshot_as_file("./img/logputQ_img.jpg")
 		self.logout()
 		self.driver.get_screenshot_as_file("./img/logoutH_img.jpg")
-
-		

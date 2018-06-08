@@ -19,7 +19,7 @@ from .login_page import LoginPage
 class NocollectPage(Page):
 
 	my_favs_loc = (By.LINK_TEXT, u"我的收藏")  # 二级导航我的收藏
-	flag_list_loc = (By.XPATH, "/html/body/div[4]/div/div[2]/div[1]/div/div/ul/li[1]/div/div[2]/div[4]/a")  #取消收藏按钮
+	flag_list_loc = (By.XPATH, "//*[@class='item uresource']/ul/li[1]/div/div[2]/div[4]/a")  #取消收藏按钮
 
 	def my_favs(self):
 		self.find_element(*self.my_favs_loc).click()

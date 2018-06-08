@@ -56,7 +56,6 @@ class Login(myunit.MyTest):
 		self.driver.get_screenshot_as_file("./img/login_ture.jpg")
 
 
-
 	def tearDown(self):
 		self.driver.quit()
 
