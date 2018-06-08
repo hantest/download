@@ -18,10 +18,16 @@ from test_page.comment_page import CommentPage
 #
 
 class Comment(myunit.MyTest):
+	''' 评论 '''
 
-	def test_comment(self):
-		''' 资源评论 '''
-		CommentPage(self.driver).comment_page()
+	def test_notdownload_comment(self):
+		''' 没有下载资源点击评论 '''
+		CommentPage(self.driver).notdownload_comment_page()
+
+	def test_download_comment(self):
+		''' 资源下载后评论 '''
+		CommentPage(self.driver).download_comment_page()
+
 
 	def tearDown(self):
 		self.driver.quit()

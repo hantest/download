@@ -42,10 +42,13 @@ if __name__ == '__main__':
 	#suite.addTest(unittest.makeSuite(Follow,"test_follow"))  #关注
 	#suite.addTest(unittest.makeSuite(Follow,"test_not_follow")) #取消关注
 	#suite.addTest(unittest.makeSuite(Comment,"test_comment"))  #评论
+	#suite.addTest(unittest.makeSuite(Comment,"test_notdownload_comment")) #资源未下载点击评论
+	suite.addTest(unittest.makeSuite(Comment,"test_download_comment")) #下载资源后评论
+
 	#suite.addTest(unittest.makeSuite(Album,"test_album"))  #专辑管理
 	#suite.addTest(unittest.makeSuite(Jpalbum,"test_jp_album"))  #精品专辑-顶部图片切换
 	#suite.addTest(unittest.makeSuite(Jpalbum,"test_album_gx"))  #精品专辑-专辑贡献榜
-	suite.addTest(unittest.makeSuite(Jpalbum,"test_album_list"))  #精品专辑列表-点击用户头像/用户名跳转
+	#suite.addTest(unittest.makeSuite(Jpalbum,"test_album_list"))  #精品专辑列表-点击用户头像/用户名跳转
 
 	# 获取当前时间
 	now = time.strftime("%Y-%m-%d %H_%M_%S")
