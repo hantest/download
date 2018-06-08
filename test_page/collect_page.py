@@ -42,7 +42,6 @@ class CollectPage(Page):
 
 		def collect_page(self):
 			''' 资源收藏 '''
-
 			LoginPage(self.driver).login_page()
 			self.zx_list()
 			self.detail_list()
