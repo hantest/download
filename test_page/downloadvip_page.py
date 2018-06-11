@@ -51,7 +51,6 @@ class DownloadVipPage(Page):
 
 	def downloadvipy_page(self):
 		''' VIP下载-页面中 '''
-
 		LoginPage(self.driver).login_page() #登陆
 		self.zx_list()
 		self.detail_list()
@@ -68,9 +67,10 @@ class DownloadVipPage(Page):
 				self.vip_btn()  #点击弹框中VIP下载按钮
 				sleep(3)
 
+
+
 	def downloadvipg_page(self):
 		''' VIP下载-跟随菜单 '''
-
 		LoginPage(self.driver).login_page()
 		self.zx_list()
 		self.detail_list()
@@ -90,6 +90,7 @@ class DownloadVipPage(Page):
 				self.driver.get_screenshot_as_file("./img/downVip_g_img.jpg")
 				self.vip_btn()  #点击弹框中VIP下载按钮
 				sleep(3)
+
 
 
 	def downloadvipx_page(self):

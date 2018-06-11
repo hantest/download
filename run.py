@@ -9,6 +9,7 @@ from test_case.collect_case import Collect
 from test_case.nocollect_case import Nocollect
 from test_case.report_case import Report
 from test_case.downloadvip_case import DownloadVip
+from test_case.download_case import Download
 from test_case.follow_case import Follow
 from test_case.comment_case import Comment
 from test_case.album_case import Album
@@ -39,14 +40,16 @@ if __name__ == '__main__':
 	#suite.addTest(unittest.makeSuite(DownloadVip,"test_downloady_vip")) #VIP页面下载
 	#suite.addTest(unittest.makeSuite(DownloadVip,"test_downloadg_vip")) #VIP跟随菜单下载
 	#suite.addTest(unittest.makeSuite(DownloadVip,"test_downloadx_vip"))  #VIP相关推荐下载
+	suite.addTest(unittest.makeSuite(Download,"test_download"))  #普通用户下载-积分不足有剩余C币
+
 
 	#suite.addTest(unittest.makeSuite(Follow,"test_follow"))  #关注
 	#suite.addTest(unittest.makeSuite(Follow,"test_not_follow")) #取消关注
 	#suite.addTest(unittest.makeSuite(Comment,"test_comment"))  #评论
 	#suite.addTest(unittest.makeSuite(Comment,"test_notdownload_comment")) #资源未下载点击评论
 	#suite.addTest(unittest.makeSuite(Comment,"test_download_comment")) #下载资源后评论
-	#
-	suite.addTest(unittest.makeSuite(Rank,"test_rank"))  #排行榜
+	
+	#suite.addTest(unittest.makeSuite(Rank,"test_rank"))  #排行榜
 	#suite.addTest(unittest.makeSuite(Album,"test_album"))  #专辑管理
 	#suite.addTest(unittest.makeSuite(Jpalbum,"test_jp_album"))  #精品专辑-顶部图片切换
 	#suite.addTest(unittest.makeSuite(Jpalbum,"test_album_gx"))  #精品专辑-专辑贡献榜
