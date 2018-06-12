@@ -40,8 +40,8 @@ if __name__ == '__main__':
 	#suite.addTest(unittest.makeSuite(DownloadVip,"test_downloady_vip")) #VIP页面下载
 	#suite.addTest(unittest.makeSuite(DownloadVip,"test_downloadg_vip")) #VIP跟随菜单下载
 	#suite.addTest(unittest.makeSuite(DownloadVip,"test_downloadx_vip"))  #VIP相关推荐下载
-	suite.addTest(unittest.makeSuite(Download,"test_download"))  #普通用户下载-积分不足有剩余C币
-
+	#suite.addTest(unittest.makeSuite(Download,"test_download1"))  #普通用户下载-积分不足有剩余C币
+	suite.addTest(unittest.makeSuite(Download,"test_download2"))  #普通用户下载-积分C币==0
 
 	#suite.addTest(unittest.makeSuite(Follow,"test_follow"))  #关注
 	#suite.addTest(unittest.makeSuite(Follow,"test_not_follow")) #取消关注

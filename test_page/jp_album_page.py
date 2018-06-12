@@ -31,8 +31,7 @@ class JpalbumPage(Page):
 
 	def dl_album_page(self):
 		''' 顶部图片切换，点击用户名 '''
-
-		# ****用例：点击顶部图片后，点击右侧用户名***
+		# 用例：点击顶部图片后，点击右侧用户名
 		LoginPage(self.driver).login_page()
 		self.open()
 		self.dl_album_btn()

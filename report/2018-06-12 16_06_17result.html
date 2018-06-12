@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>下载测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2018-06-08 16:08:23</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:30.940770</p>
-<p class='attribute'><strong>Status:</strong> Error 1</p>
+<p class='attribute'><strong>Start Time:</strong> 2018-06-12 16:06:17</p>
+<p class='attribute'><strong>Duration:</strong> 0:01:05.178728</p>
+<p class='attribute'><strong>Status:</strong> Pass 1</p>
 
 <p class='description'>用例执行情况：</p>
 </div>
@@ -221,57 +221,26 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='errorClass'>
-    <td>test_case.comment_case.Comment</td>
+<tr class='passClass'>
+    <td>test_case.download_case.Download:  普通用户下载 </td>
+    <td>1</td>
     <td>1</td>
     <td>0</td>
     <td>0</td>
-    <td>1</td>
     <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
 </tr>
 
-<tr id='ft1.1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_notdownload_comment: 没有下载资源点击评论</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
-        error</a>
-
-    <div id='div_ft1.1' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft1.1: Traceback (most recent call last):
-  File "D:\download\download5\test_case\comment_case.py", line 28, in test_notdownload_comment
-    CommentPage(self.driver).notdownload_comment_page()
-  File "D:\download\download5\test_page\comment_page.py", line 65, in notdownload_comment_page
-    self.zxsc_list()
-AttributeError: 'CommentPage' object has no attribute 'zxsc_list'
-Traceback (most recent call last):
-  File "D:\download\download5\test_case\comment_case.py", line 28, in test_notdownload_comment
-    CommentPage(self.driver).notdownload_comment_page()
-  File "D:\download\download5\test_page\comment_page.py", line 65, in notdownload_comment_page
-    self.zxsc_list()
-AttributeError: 'CommentPage' object has no attribute 'zxsc_list'
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_download2: 资源大于0，积分和C币等于0</div></td>
+    <td colspan='5' align='center'>pass</td>
 </tr>
 
 <tr id='total_row'>
     <td>Total</td>
     <td>1</td>
-    <td>0</td>
-    <td>0</td>
     <td>1</td>
+    <td>0</td>
+    <td>0</td>
     <td>&nbsp;</td>
 </tr>
 </table>

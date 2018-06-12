@@ -20,8 +20,8 @@ from .downloadvip_page import DownloadVipPage
 
 class ReportPage(Page):
 
-	zx_list_loc = (By.CLASS_NAME, "tab_item")  #最新上传tab
-	detail_list_loc = (By.XPATH, "//*[@class='album_detail_wrap']/dl[1]") #最新上传列表第一个资源
+	zx_list_loc = (By.XPATH, "//ul[@class='tab_list clearfix']/li[2]")  #最新上传tab
+	detail_list_loc = (By.XPATH, "//*[@class='tab_page tab2_con']/div/dl[1]") #最新上传列表第一个资源
 
 	report_loc = (By.ID, "download_report") #点击举报按钮
 
