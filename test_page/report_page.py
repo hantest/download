@@ -93,7 +93,6 @@ class ReportPage(Page):
 
 	def report_notdownload_page(self):
 		''' 未下载资源举报 '''
-
 		LoginPage(self.driver).login_page()
 		self.zx_list()
 		self.detail_list()
@@ -103,12 +102,13 @@ class ReportPage(Page):
 		all_handle = self.driver.window_handles  #获取全部窗口句柄集合
 		for handle in all_handle:
 			if handle != now_handle:
+				self.driver.close()
 				self.driver.switch_to_window(handle)  #切换到制定的页面
 				self.report()
 				self.download_no()
 				self.driver.get_screenshot_as_file("./img/report1.jpg")
 				sleep(2)
-				self.download_close()
+				#self.download_close()
 
 
 

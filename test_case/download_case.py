@@ -33,6 +33,10 @@ class Download(myunit.MyTest):
 		DownloadPage(self.driver).download_JC_page()
 		self.assertEqual(self.driver.find_element_by_xpath("//*[@id='noVipZeroP']/div[3]/div[1]/a").text, u"点击完成任务获取下载码", msg="fail")
 
+	def test_download5(self):
+		''' 重复下载资源-未评论 '''
+		DownloadPage(self.driver).download_repeat_page()
+
 
 	def tearDown(self):
 		self.driver.quit()
