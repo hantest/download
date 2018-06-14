@@ -14,7 +14,7 @@ from test_page.jp_album_page import JpalbumPage
 class Jpalbum(myunit.MyTest):
 	 ''' 精品专辑 '''
 
-	 def test_jp_album(self):
+	 def test_album_jp(self):
 	 	''' 顶部图片切换，点击用户名跳转 '''
 	 	JpalbumPage(self.driver).dl_album_page()
 	 	self.assertEqual(self.driver.title, "我的CSDN")

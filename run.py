@@ -28,32 +28,24 @@ if __name__ == '__main__':
 	
 	#构建测试集
 	suite = unittest.TestSuite()
-
-	#suite.addTest(unittest.makeSuite(Login,"test_login"))  #登陆
-	#suite.addTest(unittest.makeSuite(Login,"test_login5"))
-	#suite.addTest(unittest.makeSuite(Logout,"test_logout")) #退出
-	#suite.addTest(unittest.makeSuite(Search,"test_search"))  #首页搜索
-	#suite.addTest(unittest.makeSuite(Collect,"test_collect")) #收藏
-	#suite.addTest(unittest.makeSuite(Nocollect,"test_nocollect")) #取消收藏
-	#suite.addTest(unittest.makeSuite(Report,"test_report"))  #举报
-	#suite.addTest(unittest.makeSuite(DownloadVip,"test_download")) #VIP下载
-	#suite.addTest(unittest.makeSuite(DownloadVip,"test_downloady_vip")) #VIP页面下载
-	#suite.addTest(unittest.makeSuite(DownloadVip,"test_downloadg_vip")) #VIP跟随菜单下载
-	#suite.addTest(unittest.makeSuite(DownloadVip,"test_downloadx_vip"))  #VIP相关推荐下载
-	#suite.addTest(unittest.makeSuite(Download,"test_download1"))  #普通用户下载-积分不足有剩余C币
-	suite.addTest(unittest.makeSuite(Download,"test_download2"))  #普通用户下载-积分C币==0
-
-	#suite.addTest(unittest.makeSuite(Follow,"test_follow"))  #关注
-	#suite.addTest(unittest.makeSuite(Follow,"test_not_follow")) #取消关注
-	#suite.addTest(unittest.makeSuite(Comment,"test_comment"))  #评论
-	#suite.addTest(unittest.makeSuite(Comment,"test_notdownload_comment")) #资源未下载点击评论
-	#suite.addTest(unittest.makeSuite(Comment,"test_download_comment")) #下载资源后评论
 	
-	#suite.addTest(unittest.makeSuite(Rank,"test_rank"))  #排行榜
-	#suite.addTest(unittest.makeSuite(Album,"test_album"))  #专辑管理
-	#suite.addTest(unittest.makeSuite(Jpalbum,"test_jp_album"))  #精品专辑-顶部图片切换
-	#suite.addTest(unittest.makeSuite(Jpalbum,"test_album_gx"))  #精品专辑-专辑贡献榜
-	#suite.addTest(unittest.makeSuite(Jpalbum,"test_album_list"))  #精品专辑列表-点击用户头像/用户名跳转
+	suite.addTest(unittest.makeSuite(Login,"test_login"))  #登陆
+	suite.addTest(unittest.makeSuite(Logout,"test_logout")) #退出
+	suite.addTest(unittest.makeSuite(Search,"test_search"))  #首页搜索
+	suite.addTest(unittest.makeSuite(Report,"test_report"))  #举报
+	suite.addTest(unittest.makeSuite(Collect,"test_collect")) #收藏
+	suite.addTest(unittest.makeSuite(Nocollect,"test_nocollect")) #取消收藏
+	suite.addTest(unittest.makeSuite(Download,"test_download"))  #普通用户下载
+	suite.addTest(unittest.makeSuite(DownloadVip,"test_download")) #VIP下载
+	suite.addTest(unittest.makeSuite(Follow,"test_follow"))  #关注
+	suite.addTest(unittest.makeSuite(Follow,"test_not_follow")) #取消关注
+	suite.addTest(unittest.makeSuite(Comment,"test*"))  #评论
+	suite.addTest(unittest.makeSuite(Rank,"test_rank"))  #排行榜
+	suite.addTest(unittest.makeSuite(Album,"test_album"))  #专辑管理
+	suite.addTest(unittest.makeSuite(Jpalbum,"test_album"))  #精品专辑-顶部图片切换
+	
+	#suite.addTest(unittest.makeSuite(Report,"test_report1"))  #举报
+
 
 	# 获取当前时间
 	now = time.strftime("%Y-%m-%d %H_%M_%S")
