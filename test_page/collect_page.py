@@ -22,7 +22,7 @@ class CollectPage(Page):
 	detail_list_loc = (By.XPATH, "//*[@class='tab_page tab2_con']/div/dl[1]") #最新上传列表第一个资源
 	favorite_loc = (By.ID, "favorite")  #收藏按钮
 	dl_lock_loc = (By.ID, "dl_lock") #收藏弹出框
-	my_favorite_loc = (By.XPATH, "//*[@id='dl_lock']/h4/a") #弹框中我的收藏
+
 
 	def zx_list(self):
 		self.find_element(*self.zx_list_loc).click()
@@ -35,9 +35,6 @@ class CollectPage(Page):
 
 	def dl_lock(self):
 		self.find_element(*self.dl_lock_loc)
-
-	def my_favorite(self):
-		self.find_element(*self.my_favorite_loc).click()
 
 
 	def collect_page(self):
@@ -54,5 +51,4 @@ class CollectPage(Page):
 				self.driver.switch_to_window(handle)  #切换到指定的页面
 				self.favorite()
 				self.dl_lock()
-				self.my_favorite()
 				sleep(3)
