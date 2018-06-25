@@ -21,7 +21,7 @@ class Follow(myunit.MyTest):
 	def test_follow(self):
 		''' 关注 '''
 		FollowPage(self.driver).follow_page()
-		self.assertEqual(self.driver.find_element_by_xpath("//*[@id='personal_wrap']/dd/p[1]/span").text, u"已关注")
+		self.assertEqual(self.driver.find_element_by_xpath("//*[@class='mod_person_r']/p/span").text, u"已关注")
 
 	def test_not_follow(self):
 		''' 取消关注 '''

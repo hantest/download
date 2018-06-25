@@ -17,6 +17,7 @@ from test_page.collect_page import CollectPage
 # @HAN
 #
 class Collect(myunit.MyTest):
+	''' 收藏资源 '''
 
 
 	def test_collect(self):

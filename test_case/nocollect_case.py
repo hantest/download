@@ -14,6 +14,7 @@ from test_page.nocollect_page import NocollectPage
 #
 
 class Nocollect(myunit.MyTest):
+	''' 取消收藏 '''
 
 	def test_nocollect(self):
 		''' 取消收藏 '''

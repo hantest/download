@@ -44,8 +44,7 @@ if __name__ == '__main__':
 	suite.addTest(unittest.makeSuite(Album,"test_album"))  #专辑管理
 	suite.addTest(unittest.makeSuite(Jpalbum,"test_album"))  #精品专辑-顶部图片切换
 	'''
-	suite.addTest(unittest.makeSuite(Follow,"test_follow"))  #关注
-	#suite.addTest(unittest.makeSuite(Report,"test_report1"))  #举报
+	suite.addTest(unittest.makeSuite(Logout,"test_logout")) #退出
 
 
 	# 获取当前时间
