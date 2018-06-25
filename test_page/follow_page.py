@@ -23,8 +23,8 @@ class FollowPage(Page):
 	zx_list_loc = (By.XPATH, "//ul[@class='tab_list clearfix']/li[2]")  #最新上传tab
 	detail_list_loc = (By.XPATH, "//*[@class='tab_page tab2_con']/div/dl[1]") #最新上传列表第一个资源
 	attention_btn_loc = (By.CLASS_NAME, "attention_btn") #关注
-	head_loc = (By.CLASS_NAME, "head") #右侧用户头像
-	person_add_focus_loc = (By.CLASS_NAME, "person_add_focus") #个人中心取消关注按钮
+	head_loc = (By.CLASS_NAME, "head") #右侧用户头像-进入个人中心页面
+	person_add_focus_loc = (By.CLASS_NAME, "person_add_focus") # 个人中心取消关注按钮
 
 
 	def zx_list(self):
