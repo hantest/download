@@ -29,20 +29,20 @@ if __name__ == '__main__':
 	#构建测试集
 	suite = unittest.TestSuite()
 	
-	suite.addTest(unittest.makeSuite(Login,"test_login"))  #登陆
-	suite.addTest(unittest.makeSuite(Logout,"test_logout")) #退出
-	suite.addTest(unittest.makeSuite(Search,"test_search"))  #首页搜索
-	suite.addTest(unittest.makeSuite(Report,"test_report"))  #举报
-	suite.addTest(unittest.makeSuite(Collect,"test_collect")) #收藏
-	suite.addTest(unittest.makeSuite(Nocollect,"test_nocollect")) #取消收藏
-	suite.addTest(unittest.makeSuite(Download,"test_download"))  #普通用户下载
-	suite.addTest(unittest.makeSuite(DownloadVip,"test_download")) #VIP下载
-	suite.addTest(unittest.makeSuite(Follow,"test_follow"))  #关注
-	suite.addTest(unittest.makeSuite(Follow,"test_not_follow")) #取消关注
-	suite.addTest(unittest.makeSuite(Comment,"test*"))  #评论
-	suite.addTest(unittest.makeSuite(Rank,"test_rank"))  #排行榜
-	suite.addTest(unittest.makeSuite(Album,"test_album"))  #专辑管理
-	suite.addTest(unittest.makeSuite(Jpalbum,"test_album"))  #精品专辑-顶部图片切换
+	suite.addTest(unittest.makeSuite(Login,"test_login5"))  #登陆
+	#suite.addTest(unittest.makeSuite(Logout,"test_logout")) #退出
+	#suite.addTest(unittest.makeSuite(Search,"test_search"))  #首页搜索
+	#suite.addTest(unittest.makeSuite(Report,"test_report"))  #举报
+	#suite.addTest(unittest.makeSuite(Collect,"test_collect")) #收藏
+	#suite.addTest(unittest.makeSuite(Nocollect,"test_nocollect")) #取消收藏
+	#suite.addTest(unittest.makeSuite(Download,"test_download"))  #普通用户下载
+	#suite.addTest(unittest.makeSuite(DownloadVip,"test_download")) #VIP下载
+	#suite.addTest(unittest.makeSuite(Follow,"test_follow"))  #关注
+	#suite.addTest(unittest.makeSuite(Follow,"test_not_follow")) #取消关注
+	#suite.addTest(unittest.makeSuite(Comment,"test*"))  #评论
+	#suite.addTest(unittest.makeSuite(Rank,"test_rank"))  #排行榜
+	#suite.addTest(unittest.makeSuite(Album,"test_album"))  #专辑管理
+	#suite.addTest(unittest.makeSuite(Jpalbum,"test_album"))  #精品专辑-顶部图片切换
 	
 	#suite.addTest(unittest.makeSuite(Report,"test_report1"))  #举报
 
